@@ -1,0 +1,78 @@
+﻿@{
+    ViewBag.Title = "Test17";
+    Layout = "~/Views/Home/Show.cshtml";
+}
+
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Highcharts</title>
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+ 
+    <script src="~/Scripts/HighCharts/highcharts.js"></script>
+    <script src="~/Scripts/HighCharts/exporting.js"></script>
+    <script src="http://code.highcharts.com/highcharts-3d.js"></script>
+</head>
+<body>
+    <div id="container" style="width: 550px; height: 400px; margin: 0 auto"></div>
+    <script language="JavaScript">
+$(document).ready(function() {
+   var chart = {
+      type: 'pie',
+      options3d: {
+         enabled: true,
+         alpha: 45,
+         beta: 0
+      }
+   };
+   var title = {
+       text: '比例分配图2'
+   };
+   var tooltip = {
+      pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+   };
+
+   var plotOptions = {
+      pie: {
+          allowPointSelect: true,
+          cursor: 'pointer',
+          depth: 35,
+          dataLabels: {
+              enabled: true,    // 是否开启数据标签提示
+              format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+              style: {
+                  color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+              }
+          },
+          showInLegend: true   //  是否开启 图例名称提示
+
+      }
+   };
+   var series= [{
+         type: 'pie',
+            name: '占比',
+            data: [
+                ['工业开采',   20.0],
+                ['生活开采',       40.0],
+                //{
+                //    name: 'Chrome',
+                //    y: 12.8,
+                //    sliced: true,
+                //    selected: true
+                //},
+                ['农业开采',    30.0],
+                ['生态开采',     10.0]
+            ]
+   }];
+
+   var json = {};
+   json.chart = chart;
+   json.title = title;
+   json.tooltip = tooltip;
+   json.plotOptions = plotOptions;
+   json.series = series;
+   $('#container').highcharts(json);
+});
+    </script>
+</body>
+</html>

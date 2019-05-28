@@ -1,0 +1,95 @@
+﻿<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Highcharts</title>
+    <link rel="icon" href="https://static.jianshukeji.com/highcharts/images/favicon.ico">
+
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+
+    <script src="https://img.hcharts.cn/highcharts/modules/exporting.js"></script>
+    <script src="https://img.hcharts.cn/highcharts-plugins/highcharts-zh_CN.js"></script>
+</head>
+<body>
+    <div id="container" style="width: 550px; height: 400px; margin: 0 auto"></div>
+    <script language="JavaScript">
+        $(document).ready(function () {
+            //var chart = {
+            //    type: 'spline',
+            //    inverted: false , // X轴与Y轴翻转
+              
+            //};
+            var title = {
+                text: '平均埋深动态曲线图'
+            };
+            // 版权信息及链接
+            var credits = {
+                enabled: false,
+                href: 'https://www.baidu.com/'
+            };
+            var subtitle = {
+                text: ''
+            };
+            var xAxis = {
+                categories: ['2007/11/25', '2007/11/26', '2007/11/27', '2007/11/28', '2007/11/29', '2007/11/30',
+                  '2007/12/1'],
+                opposite:true, // 设置X轴坐标系倒立显示
+            };
+            var yAxis = [{ // 第一个 Y 轴，放置在左边（默认在坐标）
+                min: 0,
+                title: {
+                    text: '埋深(m)'
+                },
+              
+                showFirstLabel: true,
+                reversed: true,//  设置 值 倒序翻转
+              
+            }, {    // 第二个坐标轴，放置在右边
+                min: 0,
+                linkedTo: 0,
+            
+                opposite: true,  // 通过此参数设置坐标轴显示在对立面
+                title: {
+                    text: null
+                },
+              
+                showFirstLabel: true,
+                reversed: true,//  设置 值 倒序翻转
+              
+            }];
+
+            var tooltip = {
+                valueSuffix: ''
+            }
+
+            var legend = {
+                layout: 'vertical',
+                align: 'right',
+                verticalAlign: 'middle',
+                borderWidth: 0
+            };
+
+            var series = [
+               {
+                   name: '埋深(m)',
+                   data: [6.00, 12.14, 67.25, 50.00, 24.00, 4.00, 6.25]
+               },
+              
+            ];
+
+            var json = {};
+          //  json.chart = chart;
+            json.title = title;
+            json.credits = credits; credits
+            json.subtitle = subtitle;
+            json.xAxis = xAxis;
+            json.yAxis = yAxis;
+            json.tooltip = tooltip;
+            json.legend = legend;
+            json.series = series;
+
+            $('#container').highcharts(json);
+        });
+    </script>
+</body>
+</html>

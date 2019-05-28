@@ -1,0 +1,89 @@
+﻿@{
+    ViewBag.Title = "Test18";
+    Layout = "~/Views/Home/Show.cshtml";
+}
+
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Highcharts</title>
+
+
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="~/Scripts/HighCharts/highcharts.js"></script>
+    <script src="~/Scripts/HighCharts/exporting.js"></script>
+    <script src="~/scripts/highcharts/grid-light.js"></script>
+</head>
+<body>
+    <div id="container" style="width: 550px; height: 400px; margin: 0 auto"></div>
+    <script language="JavaScript">
+        $(document).ready(function () {
+
+            $('#container').highcharts({
+                chart: { type: 'column' },
+                title: { text: '降水量时间序列图1' },
+                // colors : [
+             //  '#FF0000',//红
+              //'#FFFF00',//黄
+             // '#F79646',// 橙黄
+                     //    ],
+                xAxis: {
+                    categories: ['2005-1',
+                        ' 2005-2  ',
+                        ' 2005-3  ',
+                        ' 2005-4  ',
+                        ' 2005-5  ',
+                        ' 2005-6  ',
+                        ' 2005-7  ',
+                        ' 2005-8  ',
+                        ' 2005-9  ',
+                        ' 2005-10 ',
+                        ' 2005-11 ',
+                        ' 2005-12 '],
+                    title: {
+                        enabled: true,
+                        text: '日期',
+                        x: 238,
+                        y: -50
+                    },
+                    crosshair: true,
+
+                },
+                yAxis: {
+                    title: {
+                        text: '降水量<span>（mm）</span>'
+                    },
+                    plotLines: [{    //标识线
+                        value: 0,
+                        width: 1,
+                        color: '#808080'
+                    }]
+                },
+                tooltip: { valueSuffix: '' },
+                series: [
+                        {
+          name: '降水量',
+          data: [0.09  ,
+                8.77,
+                0.00,
+                17.50,
+                62.46,
+                110.39,
+                81.93,
+                205.68,
+                14.05,
+                0.27,
+                0.00,
+                1.17
+
+
+                 ],
+                    }
+                ],
+
+            });
+
+});
+    </script>
+</body>
+</html>

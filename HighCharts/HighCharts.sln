@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HighCharts", "HighCharts\HighCharts.csproj", "{EA3DF433-8906-4698-8056-41EFE477C776}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HighchartsExample", "C:\Users\GZK\Desktop\HighchartsExample\HighchartsExample\HighchartsExample.csproj", "{61639684-BF9D-459A-B573-6D716F33306C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EA3DF433-8906-4698-8056-41EFE477C776}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA3DF433-8906-4698-8056-41EFE477C776}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA3DF433-8906-4698-8056-41EFE477C776}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA3DF433-8906-4698-8056-41EFE477C776}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61639684-BF9D-459A-B573-6D716F33306C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61639684-BF9D-459A-B573-6D716F33306C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61639684-BF9D-459A-B573-6D716F33306C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61639684-BF9D-459A-B573-6D716F33306C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

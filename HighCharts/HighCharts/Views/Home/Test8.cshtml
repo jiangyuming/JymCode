@@ -1,0 +1,124 @@
+﻿@{
+    ViewBag.Title = "Test8";
+    Layout = "~/Views/Home/Show.cshtml";
+}
+
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Highcharts</title>
+    <link rel="icon" href="https://static.jianshukeji.com/highcharts/images/favicon.ico">
+
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+
+    <script src="https://img.hcharts.cn/highcharts/modules/exporting.js"></script>
+    <script src="https://img.hcharts.cn/highcharts-plugins/highcharts-zh_CN.js"></script>
+</head>
+<body>
+    <div id="container" style="width: 700px; height: 400px; margin: 0 auto"></div>
+    <script language="JavaScript">
+$(document).ready(function() {
+   var title = {
+       text: 'XXX地下水埋深过程线'
+   };
+    // 版权信息及链接
+   var credits = {
+       enabled: false,
+       href: 'https://www.baidu.com/'
+   };
+   var colors = [
+
+       // '#FF0000',//红
+
+        //'#FFFF00',//黄
+        '#F79646',// 橙黄
+   ];
+   var subtitle = {
+      text: ''
+   };
+   var xAxis = {
+       categories: ['2005-1',
+                              ' 2005-2  ',
+                              ' 2005-3  ',
+                              ' 2005-4  ',
+                              ' 2005-5  ',
+                              ' 2005-6  ',
+                              ' 2005-7  ',
+                              ' 2005-8  ',
+                              ' 2005-9  ',
+                              ' 2005-10 ',
+                              ' 2005-11 ',
+                              ' 2005-12 '],
+       title: {
+           //enabled: true,
+           align: 'high',
+         //  offset: 20,
+           text: '日期',
+          // margin: 100,
+           x: 10,
+           y: 50
+       },
+       crosshair: true,
+         opposite: true, // 设置X轴坐标系倒立显示
+   };
+   var yAxis = {
+      title: {
+         text: '埋深（m）'
+      },
+      reversed: true,//  设置 值 倒序翻转
+     // lineColor: 'black',  //坐标轴轴线的颜色值
+     // lineWidth: 1,           //坐标轴轴线的宽度
+      plotLines: [{    //标识线
+         value: 0,
+         width: 1,
+         color: '#808080'
+      }]
+   };
+
+   var tooltip = {
+      valueSuffix: ''
+   }
+
+   //var legend = {
+   //   layout: 'vertical',
+   //   align: 'right',
+   //   verticalAlign: 'middle',
+   //   borderWidth: 0
+   //};
+
+   var series =  [
+      {
+         name: '埋深',
+         data: [23.75, 23.38,
+                       23.61,
+                       26.03,
+                       27.60,
+                       28.35,
+                       28.31,
+                       27.41,
+                       26.78,
+                       26.95,
+                       27.66,
+                       27.40,
+         ],
+      }
+   ];
+
+   var json = {};
+
+   json.title = title;
+   json.credits = credits;
+   json.colors = colors;
+   json.subtitle = subtitle;
+   json.xAxis = xAxis;
+   json.yAxis = yAxis;
+   json.tooltip = tooltip;
+  // json.legend = legend;
+   json.series = series;
+
+   $('#container').highcharts(json);
+});
+    </script>
+</body>
+</html>

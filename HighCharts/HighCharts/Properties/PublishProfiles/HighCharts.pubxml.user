@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+您 Web 项目的发布/打包进程将使用此文件。您可以通过编辑此 MSBuild 文件
+来自定义该进程的行为。若要了解与此相关的详细信息，请访问 http://go.microsoft.com/fwlink/?LinkID=208121。
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>E:\丰台机井备份\GIS地图学习\fabu</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/HighCharts.dll">
+      <publishTime>01/22/2019 15:52:41</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>01/09/2019 09:36:56</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Mvc.FixedDisplayModes.dll">
+      <publishTime>01/09/2019 09:36:57</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>01/09/2019 09:36:56</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>01/09/2019 09:36:57</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>01/09/2019 09:36:57</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>01/09/2019 09:36:56</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>01/09/2019 09:36:57</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>01/09/2019 09:36:57</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>01/09/2019 09:36:57</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Web.Helpers.resources.dll">
+      <publishTime>01/09/2019 09:36:58</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Web.Mvc.resources.dll">
+      <publishTime>01/09/2019 09:36:58</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Web.Razor.resources.dll">
+      <publishTime>01/09/2019 09:36:58</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Web.WebPages.Deployment.resources.dll">
+      <publishTime>01/09/2019 09:36:58</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Web.WebPages.Razor.resources.dll">
+      <publishTime>01/09/2019 09:36:58</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Web.WebPages.resources.dll">
+      <publishTime>01/09/2019 09:36:58</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>01/09/2019 09:36:54</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>01/09/2019 09:36:59</publishTime>
+    </File>
+    <File Include="Views/Home/highcharts_column_basic.cshtml">
+      <publishTime>01/10/2019 09:46:37</publishTime>
+    </File>
+    <File Include="Views/Home/highcharts_column_basic_moredata.cshtml">
+      <publishTime>01/10/2019 10:35:27</publishTime>
+    </File>
+    <File Include="Views/Home/highcharts_combinations_dualaxes.cshtml">
+      <publishTime>01/09/2019 17:38:45</publishTime>
+    </File>
+    <File Include="Views/Home/highcharts_combinations_dualaxes_change.cshtml">
+      <publishTime>01/16/2019 10:15:01</publishTime>
+    </File>
+    <File Include="Views/Home/highcharts_line_ajax.cshtml">
+      <publishTime>01/09/2019 14:51:13</publishTime>
+    </File>
+    <File Include="Views/Home/highcharts_line_basic.cshtml">
+      <publishTime>01/10/2019 16:05:27</publishTime>
+    </File>
+    <File Include="Views/Home/highcharts_line_basic_y_opposite.cshtml">
+      <publishTime>01/16/2019 10:06:00</publishTime>
+    </File>
+    <File Include="Views/Home/highcharts_line_basic_y_opposite_moredata.cshtml">
+      <publishTime>01/10/2019 15:05:22</publishTime>
+    </File>
+    <File Include="Views/Home/highcharts_line_labels.cshtml">
+      <publishTime>01/10/2019 15:12:15</publishTime>
+    </File>
+    <File Include="Views/Home/Home.cshtml">
+      <publishTime>01/10/2019 16:22:02</publishTime>
+    </File>
+    <File Include="Views/Home/Index.cshtml">
+      <publishTime>01/18/2019 11:54:36</publishTime>
+    </File>
+    <File Include="Views/Home/Index_Ajax.cshtml">
+      <publishTime>01/09/2019 09:44:03</publishTime>
+    </File>
+    <File Include="Views/Home/Index_Ajax_t.cshtml">
+      <publishTime>01/09/2019 09:46:12</publishTime>
+    </File>
+    <File Include="Views/Home/Index_sign.cshtml">
+      <publishTime>01/09/2019 09:56:32</publishTime>
+    </File>
+    <File Include="Views/Home/Index_zhu.cshtml">
+      <publishTime>01/09/2019 10:02:03</publishTime>
+    </File>
+    <File Include="Views/Home/Show.cshtml">
+      <publishTime>01/22/2019 15:34:28</publishTime>
+    </File>
+    <File Include="Views/Home/Test.cshtml">
+      <publishTime>01/22/2019 15:38:01</publishTime>
+    </File>
+    <File Include="Views/Home/Test2.cshtml">
+      <publishTime>01/22/2019 15:36:03</publishTime>
+    </File>
+    <File Include="Views/Home/Test3.cshtml">
+      <publishTime>01/22/2019 15:36:43</publishTime>
+    </File>
+    <File Include="Views/Web.config">
+      <publishTime>01/09/2019 09:36:54</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>01/09/2019 10:03:32</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

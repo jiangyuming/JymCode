@@ -1,0 +1,133 @@
+﻿@{
+    ViewBag.Title = "Test9";
+    Layout = "~/Views/Home/Show.cshtml";
+}
+
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Highcharts </title>
+    <link rel="icon" href="https://static.jianshukeji.com/highcharts/images/favicon.ico">
+
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+
+    <script src="https://img.hcharts.cn/highcharts/modules/exporting.js"></script>
+    <script src="https://img.hcharts.cn/highcharts-plugins/highcharts-zh_CN.js"></script>
+</head>
+<body>
+    <div id="container" style="width: 700px; height: 400px; margin: 0 auto"></div>
+    <script language="JavaScript">
+$(document).ready(function() {
+   var chart = {
+       type: 'column',
+
+   };
+   var colors = [
+
+         // '#FF0000',//红
+
+         // '#FFFF00',//黄
+         '#BB6FAD' // 淡紫色
+
+   ];
+   var title = {
+       text: 'XXX地下水水位时间序列图'
+   };
+   var subtitle = {
+      text: ''
+   };
+   var xAxis = {
+       categories: ['2005-1',
+                              ' 2005-2  ',
+                              ' 2005-3  ',
+                              ' 2005-4  ',
+                              ' 2005-5  ',
+                              ' 2005-6  ',
+                              ' 2005-7  ',
+                              ' 2005-8  ',
+                              ' 2005-9  ',
+                              ' 2005-10 ',
+                              ' 2005-11 ',
+                              ' 2005-12 '],
+       title: {
+           //enabled: true,
+           align: 'high',
+           //  offset: 20,
+           text: '日期',
+           // margin: 100,
+           x: 10,
+           y: 50
+       },
+       crosshair: true,
+       opposite: true, // 设置X轴坐标系倒立显示
+   };
+   var yAxis = {
+      min: 0,
+      title: {
+         text: '埋深 (m)'
+      },
+        reversed: true,//  设置 值 倒序翻转
+   };
+   var tooltip = {
+      //headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+      //pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+      //   '<td style="padding:0"><b>{point.y:.1f} mm</b></td></tr>',
+       //footerFormat: '</table>',
+     //  pointFormat: '{series.name}: <b>{point.y:.1f}</b><br/>',
+     //  valueSuffix: ' cm',
+      shared: true,
+      useHTML: true
+   };
+   var plotOptions = {         //数据列配置    三种控制级别 、这是第二级
+      column: {
+         pointPadding: 0.2,
+         borderWidth: 0
+      }
+   };
+   var credits = {
+      enabled: false
+   };
+
+   var series= [{
+       name: '埋深',
+       data: [23.75, 23.38,
+                         23.61,
+                         26.03,
+                         27.60,
+                         28.35,
+                         28.31,
+                         27.41,
+                         26.78,
+                         26.95,
+                         27.66,
+                         27.40,
+       ],
+       // dataLabels: {
+       //     enabled: true,   // 数据标签是否显示，其他属性：旋转、保留几位小数、样式等
+
+       // },
+        zones: [{           //  数据列 不同值 分区设置
+            value: 0,
+            color: 'red'
+        }]
+
+        }];
+
+   var json = {};
+   json.chart = chart;
+   json.colors = colors;
+   json.title = title;
+   json.subtitle = subtitle;
+   json.tooltip = tooltip;
+   json.xAxis = xAxis;
+   json.yAxis = yAxis;
+   json.series = series;
+  // json.plotOptions = plotOptions;
+   json.credits = credits;
+   $('#container').highcharts(json);
+
+});
+    </script>
+</body>
+</html>

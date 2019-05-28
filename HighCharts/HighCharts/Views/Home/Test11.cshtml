@@ -1,0 +1,134 @@
+﻿@{
+    ViewBag.Title = "Test11";
+    Layout = "~/Views/Home/Show.cshtml";
+}
+
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Highcharts </title>
+    <link rel="icon" href="https://static.jianshukeji.com/highcharts/images/favicon.ico">
+
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+
+    <script src="https://img.hcharts.cn/highcharts/modules/exporting.js"></script>
+    <script src="https://img.hcharts.cn/highcharts-plugins/highcharts-zh_CN.js"></script>
+</head>
+<body>
+    <div id="container" style="width: 550px; height: 400px; margin: 0 auto"></div>
+    <script language="JavaScript">
+        $(document).ready(function () {
+            var chart = {
+                type: 'column'
+            };
+            var title = {
+                text: 'XX年至XX年XXX地下水埋深比较图'
+            };
+            var subtitle = {
+                text: ''
+            };
+            var xAxis = {
+                //categories: ['太原市', '阳泉市', '长治市', '运城市', '晋中市', '临汾市', '吕梁市', '大同市', '朔州市', '阳泉市', '忻州市'],
+                categories: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'],
+                title: {
+                    //enabled: true,
+                    align: 'high',
+                    //  offset: 20,
+                    text: '<span style="font-size:12px;">日期</span>',
+                    // margin: 100,
+                    x: 10,
+                    y: 24
+                },
+                crosshair: true,
+                 opposite: true, // 设置X轴坐标系倒立显示
+            };
+            var yAxis = {
+                min: 0,
+                title: {
+                    text: '埋深 (m)'
+                },
+                 reversed: true,//  设置 值 倒序翻转
+            };
+            var tooltip = {
+                headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+                pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+                   '<td style="padding:0"><b>{point.y:.2f} </b></td></tr>',
+                footerFormat: '</table>',
+                shared: true,
+                useHTML: true
+            };
+            var plotOptions = {
+                column: {
+                    pointPadding: 0.2,
+                    borderWidth: 0
+                }
+            };
+            var credits = {
+                enabled: false
+            };
+
+            var series = [{
+                name: '2015',
+                data: [23.75   ,
+                        23.38,
+                        23.61,
+                        26.03,
+                        27.60,
+                        28.35,
+                        28.31,
+                        27.41,
+                        26.78,
+                        26.95,
+                        27.66,
+                        27.40
+                     ]
+            }, {
+                name: '2016',
+                data: [27.52   ,
+                        27.35,
+                        28.23,
+                        29.75,
+                        31.34,
+                        32.30,
+                        31.85,
+                        31.34,
+                        31.43,
+                        31.30,
+                        31.80,
+                        31.79
+            ]
+            }, {
+                name: '2016',
+                data: [31.74   ,
+                        31.63,
+                        31.93,
+                        33.38,
+                        35.12,
+                        36.23,
+                        35.68,
+                        35.67,
+                        35.48,
+                        35.07,
+                        35.45,
+                        35.42,
+
+                ]
+            }];
+
+            var json = {};
+            json.chart = chart;
+            json.title = title;
+            json.subtitle = subtitle;
+            json.tooltip = tooltip;
+            json.xAxis = xAxis;
+            json.yAxis = yAxis;
+            json.series = series;
+            json.plotOptions = plotOptions;
+            json.credits = credits;
+            $('#container').highcharts(json);
+
+        });
+    </script>
+</body>
+</html>
